@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Silla gamer ergonómica en rojo y negro">
+<defs>
+<radialGradient id="bg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#1b1f3b"/><stop offset="1" stop-color="#0b0d17"/></radialGradient>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="400" height="300" fill="url(#bg)"/>
+<path d="M0 250h400" stroke="#22d3ee" stroke-opacity=".25"/>
+<g filter="url(#glow)"><path d="M150 55h100l12 105h-124z" fill="#10132a" stroke="#ff3d9a" stroke-width="3" stroke-linejoin="round"/>
+<path d="M170 70h60v70h-60z" fill="#ff3d9a" opacity=".25"/>
+<rect x="128" y="160" width="144" height="34" rx="12" fill="#10132a" stroke="url(#neon)" stroke-width="3"/>
+<path d="M120 120v50M280 120v50" stroke="#8b5cf6" stroke-width="7" stroke-linecap="round"/></g>
+<path d="M200 194v36M200 230l-55 28M200 230l55 28M200 230v32" stroke="#22d3ee" stroke-width="6" stroke-linecap="round"/>
+<circle cx="145" cy="262" r="7" fill="#8b5cf6"/><circle cx="255" cy="262" r="7" fill="#8b5cf6"/><circle cx="200" cy="268" r="7" fill="#8b5cf6"/>
+</svg>

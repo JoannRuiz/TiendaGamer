@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Control de videojuegos inalámbrico">
+<defs>
+<radialGradient id="bg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#1b1f3b"/><stop offset="1" stop-color="#0b0d17"/></radialGradient>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="400" height="300" fill="url(#bg)"/>
+<path d="M0 250h400" stroke="#22d3ee" stroke-opacity=".25"/>
+<g filter="url(#glow)"><path d="M115 110h170c30 0 50 30 58 80 4 28-14 44-34 32l-34-24h-110l-34 24c-20 12-38-4-34-32 8-50 28-80 58-80z" fill="#10132a" stroke="url(#neon)" stroke-width="3" stroke-linejoin="round"/>
+<path d="M140 150v34M123 167h34" stroke="#22d3ee" stroke-width="7" stroke-linecap="round"/>
+<circle cx="262" cy="148" r="8" fill="#ff3d9a"/><circle cx="282" cy="167" r="8" fill="#22d3ee"/><circle cx="242" cy="167" r="8" fill="#8b5cf6"/><circle cx="262" cy="186" r="8" fill="#4ade80"/>
+<circle cx="170" cy="196" r="14" fill="#1b1f3b" stroke="#8b5cf6" stroke-width="2.5"/><circle cx="230" cy="196" r="14" fill="#1b1f3b" stroke="#8b5cf6" stroke-width="2.5"/></g>
+</svg>

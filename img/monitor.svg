@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Monitor gamer con una imagen de colores">
+<defs>
+<radialGradient id="bg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#1b1f3b"/><stop offset="1" stop-color="#0b0d17"/></radialGradient>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="400" height="300" fill="url(#bg)"/>
+<path d="M0 250h400" stroke="#22d3ee" stroke-opacity=".25"/>
+<g filter="url(#glow)"><rect x="60" y="45" width="280" height="170" rx="10" fill="#0e1124" stroke="url(#neon)" stroke-width="3"/></g>
+<rect x="72" y="57" width="256" height="146" rx="4" fill="#1a1245"/>
+<path d="M72 190l60-55 40 35 50-70 106 90v3H72z" fill="#22d3ee" opacity=".55"/><circle cx="290" cy="90" r="18" fill="#ff3d9a" opacity=".85"/>
+<path d="M200 215v28M150 250h100" stroke="#8b5cf6" stroke-width="7" stroke-linecap="round"/>
+</svg>

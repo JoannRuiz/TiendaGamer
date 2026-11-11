@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Mouse gamer con luz de color">
+<defs>
+<radialGradient id="bg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#1b1f3b"/><stop offset="1" stop-color="#0b0d17"/></radialGradient>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="400" height="300" fill="url(#bg)"/>
+<path d="M0 250h400" stroke="#22d3ee" stroke-opacity=".25"/>
+<g filter="url(#glow)"><path d="M200 70c45 0 68 35 68 85v35c0 38-30 58-68 58s-68-20-68-58v-35c0-50 23-85 68-85z" fill="#10132a" stroke="url(#neon)" stroke-width="3"/>
+<path d="M200 70v70M132 150h136" stroke="#8b5cf6" stroke-width="2.5"/><rect x="190" y="95" width="20" height="34" rx="10" fill="#22d3ee"/></g>
+<path d="M200 248c0 20 -20 24 -40 30" stroke="#22d3ee" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

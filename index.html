@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pixel Arena: tienda virtual de productos gamer. Teclados, mouse, audio, monitores y sillas con carrito de compras.">
+  <title>Pixel Arena | Tienda virtual de productos gamer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo" aria-label="Pixel Arena, inicio">
+        <span class="logo-mark" aria-hidden="true">PA</span>
+        <span class="logo-text">Pixel Arena</span>
+      </a>
+
+      <nav class="main-nav" id="menuPrincipal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#ventajas">Por qué elegirnos</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="btnCarrito" aria-label="Abrir carrito de compras, 0 productos" aria-controls="carrito" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19" r="1.5" fill="currentColor"/><circle cx="17" cy="19" r="1.5" fill="currentColor"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="menuPrincipal" aria-label="Abrir menú de navegación">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Tienda gamer en línea</p>
+          <h1>Equipa tu setup y sube de nivel</h1>
+          <p class="lead">Periféricos, audio, monitores y sillas para jugar, transmitir y estudiar con comodidad. Compara especificaciones y arma tu carrito en un solo lugar.</p>
+          <div class="hero-actions">
+            <a href="#catalogo" class="btn">Ver catálogo</a>
+            <a href="#contacto" class="btn btn-outline">Hablar con soporte</a>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img src="img/hero.svg" alt="Ilustración de un escritorio gamer con monitor, teclado y mouse iluminados" width="640" height="480">
+        </figure>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="section" id="catalogo">
+      <div class="container">
+        <header class="section-head">
+          <h2>Catálogo</h2>
+          <p>Elige una categoría, busca por nombre u ordena por precio.</p>
+        </header>
+
+        <div class="toolbar">
+          <div class="filters" role="group" aria-label="Filtrar productos por categoría">
+            <button class="chip is-active" data-filter="todos">Todos</button>
+            <button class="chip" data-filter="perifericos">Periféricos</button>
+            <button class="chip" data-filter="audio">Audio</button>
+            <button class="chip" data-filter="monitores">Monitores</button>
+            <button class="chip" data-filter="sillas">Sillas</button>
+            <button class="chip" data-filter="accesorios">Accesorios</button>
+          </div>
+          <div class="tools">
+            <div class="field">
+              <label for="buscar">Buscar</label>
+              <input type="search" id="buscar" placeholder="Ej: teclado" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="orden">Ordenar por</label>
+              <select id="orden">
+                <option value="relevancia">Relevancia</option>
+                <option value="precio-asc">Precio: menor a mayor</option>
+                <option value="precio-desc">Precio: mayor a menor</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <p class="result-count" id="resultCount" role="status" aria-live="polite">8 productos</p>
+
+        <div class="products-grid" id="productGrid">
+
+          <article class="product-card" data-id="1" data-name="Teclado mecánico RGB Nova 75%" data-price="289000" data-category="perifericos"
+                   data-desc="Teclado compacto con respuesta rápida, ideal para jugar y escribir durante horas."
+                   data-specs="Switches rojos lineales|Iluminación RGB por tecla|Formato 75%|Cable USB-C desmontable">
+            <img src="img/teclado.svg" alt="Teclado mecánico con teclas iluminadas" loading="lazy" width="400" height="300">
+            <div class="card-body">
+              <p class="tag">Periféricos</p>
+              <h3>Teclado mecánico RGB Nova 75%</h3>
+              <p class="price">$289.000</p>
+              <div class="card-actions">
+                <button class="btn btn-small btn-outline js-detalle">Ver detalle</button>
+                <button class="btn btn-small js-agregar">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="2" data-name="Mouse Vortex Lite 12.000 DPI" data-price="149000" data-category="perifericos"
+                   data-desc="Mouse ligero con sensor preciso y botones programables para juegos de acción."
+                   data-specs="Sensor óptico de 12.000 DPI|6 botones programables|Peso aproximado de 69 g|Cable flexible">
+            <img src="img/mouse.svg" alt="Mouse gamer con luz de color" loading="lazy" width="400" height="300">
+            <div class="card-body">
+              <p class="tag">Periféricos</p>
+              <h3>Mouse Vortex Lite 12.000 DPI</h3>
+              <p class="price">$149.000</p>
+              <div class="card-actions">
+                <button class="btn btn-small btn-outline js-detalle">Ver detalle</button>
+                <button class="btn btn-small js-agregar">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="3" data-name="Mousepad XXL Galaxy 90×40 cm" data-price="59000" data-category="accesorios"
+                   data-desc="Superficie amplia con base antideslizante que cubre teclado y mouse."
+                   data-specs="Tamaño 90 × 40 cm|Base de caucho antideslizante|Bordes cosidos|Superficie de tela suave">
+            <img src="img/mousepad.svg" alt="Mousepad extendido con diseño de galaxia" loading="lazy" width="400" height="300">
+            <div class="card-body">
+              <p class="tag">Accesorios</p>
+              <h3>Mousepad XXL Galaxy 90×40 cm</h3>
+              <p class="price">$59.000</p>
+              <div class="card-actions">
+                <button class="btn btn-small btn-outline js-detalle">Ver detalle</button>
+                <button class="btn btn-small js-agregar">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="4" data-name="Audífonos Sonic 7.1 con micrófono" data-price="219000" data-category="audio"
+                   data-desc="Audífonos con sonido envolvente virtual y micrófono para comunicarte con tu equipo."
+                   data-specs="Sonido envolvente virtual 7.1|Micrófono plegable|Almohadillas acolchadas|Conexión USB">
+            <img src="img/audifonos.svg" alt="Audífonos gamer con micrófono" loading="lazy" width="400" height="300">
+            <div class="card-body">
+              <p class="tag">Audio</p>
+              <h3>Audífonos Sonic 7.1 con micrófono</h3>
+              <p class="price">$219.000</p>
+              <div class="card-actions">
+                <button class="btn btn-small btn-outline js-detalle">Ver detalle</button>
+                <button class="btn btn-small js-agregar">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="5" data-name="Micrófono USB Streamer Pro" data-price="199000" data-category="audio"
+                   data-desc="Micrófono de mesa para transmisiones, clases virtuales y grabación de voz."
+                   data-specs="Patrón cardioide|Conexión USB sin controladores|Soporte de mesa incluido|Botón de silencio">
+            <img src="img/microfono.svg" alt="Micrófono de mesa con base" loading="lazy" width="400" height="300">
+            <div class="card-body">
+              <p class="tag">Audio</p>
+              <h3>Micrófono USB Streamer Pro</h3>
+              <p class="price">$199.000</p>
+              <div class="card-actions">
+                <button class="btn btn-small btn-outline js-detalle">Ver detalle</button>
+                <button class="btn btn-small js-agregar">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="6" data-name="Monitor Arena 24&quot; 144 Hz" data-price="749000" data-category="monitores"
+                   data-desc="Monitor Full HD con alta tasa de refresco para movimientos más fluidos."
+                   data-specs="Pantalla de 24 pulgadas|Resolución Full HD|Frecuencia de 144 Hz|Entradas HDMI y DisplayPort">
+            <img src="img/monitor.svg" alt="Monitor gamer con una imagen de colores" loading="lazy" width="400" height="300">
+            <div class="card-body">
+              <p class="tag">Monitores</p>
+              <h3>Monitor Arena 24" 144 Hz</h3>
+              <p class="price">$749.000</p>
+              <div class="card-actions">
+                <button class="btn btn-small btn-outline js-detalle">Ver detalle</button>
+                <button class="btn btn-small js-agregar">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="7" data-name="Silla Ergo Throne Gamer" data-price="899000" data-category="sillas"
+                   data-desc="Silla ergonómica con soporte lumbar y reclinación para sesiones largas."
+                   data-specs="Respaldo reclinable|Soporte lumbar y de cuello|Altura regulable|Apoyabrazos ajustables">
+            <img src="img/silla.svg" alt="Silla gamer ergonómica en rojo y negro" loading="lazy" width="400" height="300">
+            <div class="card-body">
+              <p class="tag">Sillas</p>
+              <h3>Silla Ergo Throne Gamer</h3>
+              <p class="price">$899.000</p>
+              <div class="card-actions">
+                <button class="btn btn-small btn-outline js-detalle">Ver detalle</button>
+                <button class="btn btn-small js-agregar">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="8" data-name="Control inalámbrico Orbit" data-price="169000" data-category="perifericos"
+                   data-desc="Control con diseño ergonómico para jugar en computador y otros dispositivos compatibles."
+                   data-specs="Conexión inalámbrica|Vibración dual|Sticks de precisión|Batería recargable">
+            <img src="img/control.svg" alt="Control de videojuegos inalámbrico" loading="lazy" width="400" height="300">
+            <div class="card-body">
+              <p class="tag">Periféricos</p>
+              <h3>Control inalámbrico Orbit</h3>
+              <p class="price">$169.000</p>
+              <div class="card-actions">
+                <button class="btn btn-small btn-outline js-detalle">Ver detalle</button>
+                <button class="btn btn-small js-agregar">Agregar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty-msg" id="emptyMsg" hidden>No encontramos productos con ese criterio. Prueba con otra búsqueda o categoría.</p>
+      </div>
+    </section>
+
+    <!-- VENTAJAS -->
+    <section class="section section-alt" id="ventajas">
+      <div class="container">
+        <header class="section-head">
+          <h2>Por qué elegirnos</h2>
+          <p>Pensamos la tienda para que comprar sea fácil y claro.</p>
+        </header>
+        <div class="benefits">
+          <article class="benefit">
+            <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true" focusable="false"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7zM7 19a1.5 1.5 0 1 0 0-.01M17 19a1.5 1.5 0 1 0 0-.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <h3>Envíos a todo el país</h3>
+            <p>Despachamos tu pedido con seguimiento para que sepas cuándo llega.</p>
+          </article>
+          <article class="benefit">
+            <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Garantía de producto</h3>
+            <p>Cada artículo muestra sus especificaciones para que compares con tranquilidad.</p>
+          </article>
+          <article class="benefit">
+            <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true" focusable="false"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <h3>Pago flexible</h3>
+            <p>Pensado para tarjeta, transferencia o contra entrega (en esta versión es una simulación).</p>
+          </article>
+          <article class="benefit">
+            <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true" focusable="false"><path d="M4 14v-2a8 8 0 0 1 16 0v2M4 14h3v5H4zM17 14h3v5h-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <h3>Soporte cercano</h3>
+            <p>Resolvemos dudas de compatibilidad y garantía por el formulario de contacto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="section" id="preguntas">
+      <div class="container narrow">
+        <header class="section-head">
+          <h2>Preguntas frecuentes</h2>
+        </header>
+        <div class="accordion">
+          <div class="acc-item">
+            <h3><button class="acc-trigger" aria-expanded="false" aria-controls="acc1" id="accBtn1">¿Cómo funciona el carrito?</button></h3>
+            <div class="acc-panel" id="acc1" role="region" aria-labelledby="accBtn1" hidden>
+              <p>Agrega productos desde el catálogo, abre el carrito con el ícono de la parte superior y cambia cantidades o elimina artículos. Tu carrito se conserva en este navegador.</p>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-trigger" aria-expanded="false" aria-controls="acc2" id="accBtn2">¿El pago es real?</button></h3>
+            <div class="acc-panel" id="acc2" role="region" aria-labelledby="accBtn2" hidden>
+              <p>No. Esta es una versión académica: el botón de finalizar compra solo simula el pedido y no procesa pagos ni guarda datos personales.</p>
+            </div>
+          </div>
+          <div class="acc-item">
+            <h3><button class="acc-trigger" aria-expanded="false" aria-controls="acc3" id="accBtn3">¿Cómo sé si un producto es compatible con mi equipo?</button></h3>
+            <div class="acc-panel" id="acc3" role="region" aria-labelledby="accBtn3" hidden>
+              <p>Usa el botón «Ver detalle» para revisar las especificaciones. Si tienes dudas, escríbenos desde el formulario de contacto.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section section-alt" id="contacto">
+      <div class="container narrow">
+        <header class="section-head">
+          <h2>Contacto y soporte</h2>
+          <p>Cuéntanos qué necesitas y te responderemos por correo.</p>
+        </header>
+        <form class="form" id="formContacto" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+              <small class="error" id="errNombre"></small>
+            </div>
+            <div class="field">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" autocomplete="email" required>
+              <small class="error" id="errCorreo"></small>
+            </div>
+            <div class="field full">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto" required>
+                <option value="">Selecciona</option>
+                <option>Consulta de un producto</option>
+                <option>Estado de un pedido</option>
+                <option>Garantía o devolución</option>
+                <option>Otro</option>
+              </select>
+              <small class="error" id="errAsunto"></small>
+            </div>
+            <div class="field full">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+              <small class="error" id="errMensaje"></small>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-block">Enviar mensaje</button>
+          <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2 class="footer-title">Pixel Arena</h2>
+        <p>Tienda virtual de productos gamer. Proyecto académico.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <p><a href="#catalogo">Catálogo</a><br><a href="#preguntas">Preguntas frecuentes</a><br><a href="#contacto">Contacto</a></p>
+      </div>
+      <div>
+        <h3>Atención</h3>
+        <p>Lunes a sábado, 9:00 a. m. – 7:00 p. m.<br>soporte@pixelarena.example</p>
+      </div>
+    </div>
+    <p class="copy">&copy; 2026 Pixel Arena. Proyecto integrador de Ingeniería Web I.</p>
+  </footer>
+
+  <!-- CARRITO (panel lateral) -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="carrito" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-head">
+      <h2>Tu carrito</h2>
+      <button class="icon-btn" id="btnCerrarCarrito" aria-label="Cerrar carrito">&times;</button>
+    </div>
+    <ul class="cart-list" id="cartList"></ul>
+    <p class="cart-empty" id="cartEmpty">Tu carrito está vacío. Agrega productos desde el catálogo.</p>
+    <div class="cart-foot">
+      <p class="cart-total"><span>Total</span> <strong id="cartTotal">$0</strong></p>
+      <button class="btn btn-block" id="btnComprar">Finalizar compra (simulada)</button>
+      <button class="btn btn-block btn-outline" id="btnVaciar">Vaciar carrito</button>
+      <p class="cart-msg" id="cartMsg" role="status" aria-live="polite"></p>
+    </div>
+  </aside>
+
+  <!-- DETALLE DE PRODUCTO (modal) -->
+  <dialog class="modal" id="modalProducto" aria-labelledby="modalTitulo">
+    <div class="modal-inner">
+      <button class="icon-btn modal-close" id="btnCerrarModal" aria-label="Cerrar detalle">&times;</button>
+      <img id="modalImg" src="" alt="" width="400" height="300">
+      <div class="modal-body">
+        <p class="tag" id="modalCat"></p>
+        <h2 id="modalTitulo"></h2>
+        <p id="modalDesc"></p>
+        <ul class="specs" id="modalSpecs"></ul>
+        <p class="price" id="modalPrecio"></p>
+        <button class="btn btn-block" id="modalAgregar">Agregar al carrito</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
